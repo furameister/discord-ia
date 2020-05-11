@@ -30,6 +30,38 @@ client.once('disconnect', () => {
 	console.log('Desconectat!');
 });
 
+client.on('message', message => {
+	if (message.content === 'ping') {
+	  message.channel.send('pong');
+	}
+  });
+  client.on('message', message => {
+	if (message.content === 'hola') {
+	  message.reply('Hola!');
+	}
+  });
+
+client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
+	if (!channel) return;
+	channel.send(`Benvingut al servidor ${member}`);
+  });
+
+client.on('message', message => {
+	
+	if (message.content === 'avatar') {
+	message.reply(message.author.displayAvatarURL());
+	}
+  });
+
+  client.on('message', message => {
+	if (message.content === 'dau') {
+		const dau = () => Math.floor(Math.random() * 6) + 1;
+	message.reply("El dau ha sortit " + dau());
+	}
+  });
+
+
 client.on('message', async message => {
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
