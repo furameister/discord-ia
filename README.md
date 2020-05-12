@@ -14,10 +14,13 @@ Un bot de Discord per simplificar l'administració de servidors
 - [FFmpeg](https://ffmpeg.zeranoe.com/builds/)
 ## Instal·lació
 ```
-https://github.com/furameister/discord-ia.git
+git clone https://github.com/furameister/discord-ia.git
 cd discord-ia-master
 npm install
 ```
+- Ara hauràs d'aconseguir el teu Token per al bot [aqui](https://discord.com/developers/applications).
+- Crea una aplicació, ves a la secció de "Bot" i copia el Token.
+- Renombra el fitxer config.json.example a config.json i introdueix el Token que acabes de crear
 ## Posar en marxa el bot
 ```
 npm index.js
