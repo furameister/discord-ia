@@ -61,6 +61,12 @@ client.on('message', message => {
 	}
   });
 
+  client.on('message', message => {
+	if (message.content === 'invitar') {
+	message.reply(message.channel.createInvite());
+	}
+  });
+
 
 client.on('message', async message => {
 	const args = message.content.slice(prefix.length).split(/ +/);

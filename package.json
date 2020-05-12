@@ -16,9 +16,13 @@
   "license": "MIT",
   "dependencies": {
     "@discordjs/opus": "^0.1.0",
+    "bufferutil": "^4.0.1",
     "discord.js": "^12.2.0",
     "ffmpeg": "0.0.4",
     "fluent-ffmpeg": "^2.1.2",
+    "libsodium-wrappers": "^0.7.6",
+    "node-pre-gyp": "^0.14.0",
+    "opusscript": "0.0.6",
     "ytdl-core": "^2.1.1"
   }
 }
