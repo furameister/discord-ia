@@ -23,7 +23,7 @@ npm install
 npm index.js
 ```
 ## Autors
-Guillem Bladé i Adria Martinez 
+Guillem Bladé i Adrià Martinez 
 
 ## Posa el bot al teu servidor!
 [Discord-ia](https://www.discord-ia.cat/)
