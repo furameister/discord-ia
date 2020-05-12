@@ -1,7 +1,7 @@
 # Discord-IA
 Un bot de Discord per simplificar l'administració de servidors
 
-## Caracteristiques
+## característiques
 - Reproducció de música
 - Playlists i cua
 - Jocs
