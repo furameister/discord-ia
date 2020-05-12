@@ -21,6 +21,7 @@
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^3.0.0",
     "fluent-ffmpeg": "^2.1.2",
+    "install": "^0.13.0",
     "install.js": "^1.0.1",
     "libsodium-wrappers": "^0.7.6",
     "node-gyp-build": "^4.2.2",
