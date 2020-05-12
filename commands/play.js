@@ -3,7 +3,7 @@ const ytdl = require("ytdl-core");
 
 module.exports = {
   name: "play",
-  description: "Posa música al servidor! - Has d'especificar el link de YouTube",
+  description: "Posa música al servidor! - Has d'especificar el link de YouTube.",
   async execute(message) {
     try {
       const args = message.content.split(" ");

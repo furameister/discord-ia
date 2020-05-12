@@ -2,7 +2,7 @@ const { getUserFromMention } = require('../util/getUser')
 
 module.exports = {
 	name: 'ban',
-	description: "Prohibeix l'entrada d'una una persona al servidor",
+	description: "Prohibeix l'entrada d'una una persona al servidor.",
 	execute(message, client) {
 		const split = message.content.split(/ +/);
 		const args = split.slice(1);
