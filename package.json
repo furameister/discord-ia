@@ -5,13 +5,16 @@
   "description": "Un bot de Discord per simplificar l'administració de servidors",
   "main": "index.js",
   "scripts": {
-    "start": "index.js"
+    "start": "/index.js"
   },
   "keywords": [
     "discord",
     "music",
     "bot"
   ],
+  "engines": {
+    "node": "14.x"
+  },
   "author": "Guillem Bladé i Adrià Martinez",
   "license": "MIT",
   "dependencies": {
