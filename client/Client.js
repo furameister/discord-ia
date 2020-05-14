@@ -1,6 +1,7 @@
 const { Client, Collection } = require('discord.js');
 
 module.exports = class extends Client {
+	//Configuració del bot
 	constructor(config) {
 		super({
 			disableEveryone: true,

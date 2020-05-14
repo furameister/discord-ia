@@ -2,6 +2,7 @@ const fs = require('fs')
 const Discord = require('discord.js');
 const Client = require('./client/Client');
 
+//Configuració token i comandes (/commands/*.js)
 const {
 	prefix,
 	token,
@@ -17,6 +18,7 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
+//Estat del bot
 console.log(client.commands);
 
 client.once('ready', () => {
@@ -37,18 +39,21 @@ client.on('message', message => {
 	}
   });
 
+  //Comanda basica
 client.on('message', message => {
 	if (message.content === 'hola') {
 	  message.reply('Hola!');
 	}
   });
 
+  //Missatge benvinguda
 client.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
 	if (!channel) return;
 	channel.send(`Benvingut al servidor ${member}`);
   });
 
+// Comandes que requereixen ID
 client.on('message', async message => {
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();

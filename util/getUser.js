@@ -1,6 +1,6 @@
 exports.getUserFromMention = (mention, client) => {
     if (!mention) return;
-
+    //Get user ID
     if (mention.startsWith('<@') && mention.endsWith('>')) {
         mention = mention.slice(2, -1);
 

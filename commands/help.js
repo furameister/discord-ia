@@ -4,6 +4,7 @@ module.exports = {
 	name: 'help',
 	description: 'Llista de les comandes del servidor.',
 	execute(message) {
+		//Comanda help - monstra name i descripció dels arxius /commands
 		let str = '';
 		const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 

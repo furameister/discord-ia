@@ -10,11 +10,14 @@ module.exports = {
       const queue = message.client.queue;
       const serverQueue = message.client.queue.get(message.guild.id);
 
+      //Confirmar que estas al canal de veu
       const voiceChannel = message.member.voice.channel;
       if (!voiceChannel)
         return message.channel.send(
           "Has d'estar al canal de veu per escoltar música!"
         );
+
+      //Confirmar permisos
       const permissions = voiceChannel.permissionsFor(message.client.user);
       if (!permissions.has("CONNECT") || !permissions.has("SPEAK")) {
         return message.channel.send(
@@ -22,12 +25,14 @@ module.exports = {
         );
       }
 
+      //Info de la musica
       const songInfo = await ytdl.getInfo(args[1]);
       const song = {
         title: songInfo.title,
         url: songInfo.video_url
       };
 
+      //Afegir cançó a cua
       if (!serverQueue) {
         const queueContruct = {
           textChannel: message.channel,
@@ -63,6 +68,7 @@ module.exports = {
     }
   },
 
+  //Reproduir musica
   play(message, song) {
     const queue = message.client.queue;
     const guild = message.guild;

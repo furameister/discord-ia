@@ -4,16 +4,19 @@ module.exports = {
 	async execute(message) {
 		const args = message.content.split(' ');
 		let deleteCount = 0;
+
+		// Numeros de borrar - No especificat
 		try {
 			deleteCount = parseInt(args[1], 10);
 		}catch(err) {
 			return message.reply('Especifica el numero de missatges que vols esborrar. (Maxim 100)')
 		}
         
-
+		// Numeros de borrar - Incorrecte
 		if (!deleteCount || deleteCount < 2 || deleteCount > 100)
 			return message.reply('El numero ha de ser entre 2 i 100. Torna a provar');
 
+		//Borrar xat
 		const fetched = await message.channel.messages.fetch({
 			limit: deleteCount,
 		});
