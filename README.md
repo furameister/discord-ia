@@ -1,9 +1,6 @@
 # Discord-IA
 Un bot de Discord per simplificar l'administració de servidors
 
-## Posa el bot al teu servidor!
-[Discord-ia](http://www.discord-ia.cat/)
-
 ## Característiques
 - Reproducció de música
 - Playlists i cua
